@@ -6,7 +6,23 @@
 body {
   padding: 10px;
 }
+#form-div input {
+  width: 60%;
+  clear: both;
+}
+#main-form input {
+  width: 100%;
+  clear: both;
+}
+form {
+  /* padding-bottom: 5pt; */
+  /* display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left; */
 
+}
 .replies {
   margin-left: 50px;
 }
