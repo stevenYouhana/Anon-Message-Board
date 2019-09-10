@@ -11,11 +11,29 @@
 
   </head>
   <body>
-    <h1>Board:</h1>
     <div id="b-content">
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      console.log("BOARD");
+      $.ajax({
+        url: '/api/board/test',
+        type:'get',
+        // data: data,
+        success: function(res) {
+          // console.log('sessionStorage:', window.sessionStorage.getItem('data'));
+          var data = JSON.parse(window.sessionStorage.getItem('data'));
+          $("#b-content")
+            .append("<h3> Board:"+data.board+"</h3></br>")
+            .append("<p>Thread: "+data.thread+"</p></br>")
+            .append("<p> User: "+data.user+"</p></br>")
+            .append("<p>Topic: "+data.topic+"</p></br>");
+
+        }
+      });
+    });
+    </script>
   </body>
 </html>

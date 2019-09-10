@@ -38,13 +38,6 @@ app.route('/')
     res.sendFile(process.cwd() + '/views/index.html');
   });
 
-// app.route('/api/board/:b')
-//   .post(function (req, res) {
-//     console.log("app.route('/api/board/:b')");
-//     // res.render(process.cwd() +'/views/board.html');
-//     res.sendFile(process.cwd() + '/views/board.html');
-//   })
-
 
 
 //For FCC testing purposes
